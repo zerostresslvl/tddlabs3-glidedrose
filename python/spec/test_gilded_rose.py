@@ -69,6 +69,25 @@ class GildedRoseTest(unittest.TestCase):
         gilded_rose.update_quality()
         self.assertEqual(0, items[0].quality)
 
+    def test_sulfuras_never_changes(self):
+        items = [Item("Sulfuras, Hand of Ragnaros", 0, 80)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEqual(80, items[0].quality)
+        self.assertEqual(0, items[0].sell_in)
+
+    def test_conjured_degrades_twice_as_fast_before_sell_date(self):
+        items = [Item("Conjured Mana Cake", 3, 6)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEqual(4, items[0].quality)
+
+    def test_conjured_degrades_twice_as_fast_after_sell_date(self):
+        items = [Item("Conjured Mana Cake", 0, 6)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEqual(2, items[0].quality)
+
 
 if __name__ == '__main__':
     unittest.main()
