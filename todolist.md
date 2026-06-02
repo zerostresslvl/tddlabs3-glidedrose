@@ -7,9 +7,9 @@ Done
 - Backstage passes increase by 2 when 10 days or less ✅
 - Backstage passes increase by 3 when 5 days or less ✅
 - Backstage passes increase by 1 when more than 10 days remain ✅
+- Backstage passes drop to 0 after concert ✅
 
 Missing
-- Backstage passes drop to 0 after concert ❌
 - Aged Brie increases by 2 after sell date ❌
 - Quality never exceeds 50 (Aged Brie, Backstage, normal) ❌
 - Quality never goes below 0 (normal) ❌
