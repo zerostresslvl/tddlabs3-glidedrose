@@ -27,6 +27,12 @@ class GildedRoseTest(unittest.TestCase):
         gilded_rose.update_quality()
         self.assertEqual(1, items[0].quality)
 
+    def test_backstage_passes_increase_by_two_when_10_days_or_less(self):
+        items = [Item("Backstage passes to a TAFKAL80ETC concert", 10, 20)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEqual(22, items[0].quality)
+
 
 if __name__ == '__main__':
     unittest.main()
