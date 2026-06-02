@@ -17,6 +17,6 @@ Missing
 
 Failing-test-first for new requirement
 - Conjured before sell date: add failing test ✅
-- Conjured before sell date: implement fix ❌
+- Conjured before sell date: implement fix ✅
 - Conjured after sell date: add failing test ✅
-- Conjured after sell date: implement fix ❌
+- Conjured after sell date: implement fix ✅
